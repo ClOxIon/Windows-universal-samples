@@ -42,8 +42,8 @@
                             <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
                         <TextBlock Grid.Row="0" Text="Additional Options:" Style="{StaticResource BasicTextStyle}" Margin="2,2,0,0"/>
-                        <TextBlock Grid.Row="1" Text="Minimum latency:" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource BasicTextStyle}" Margin="5,10,0,0"/>
-                        <ToggleSwitch x:Name="toggleMinimumLatency" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" OffContent="" OnContent="" Margin="120,0,0,0"/>
+                        <TextBlock Grid.Row="1" Text="Minimum latency:" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource BasicTextStyle}" Margin="5,10,0,0" SelectionChanged="TextBlock_SelectionChanged"/>
+                        <ToggleSwitch x:Name="toggleMinimumLatency" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" OffContent="" OnContent="" Margin="140,0,0,0"/>
                     </Grid>
                 </Border>
 

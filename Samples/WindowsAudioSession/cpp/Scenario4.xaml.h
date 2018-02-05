@@ -72,6 +72,7 @@ namespace SDKSample
             Platform::Boolean           m_IsLowLatency;
             DeviceStateChangedEvent^    m_StateChangedEvent;
             ComPtr<WASAPICapture>       m_spCapture;
-        };
+			void TextBlock_SelectionChanged(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
+		};
     }
 }

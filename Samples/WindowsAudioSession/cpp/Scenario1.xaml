@@ -14,8 +14,6 @@
     x:Class="SDKSample.WASAPIAudio.Scenario1"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:SDKSample"
-    xmlns:common="using:SDKSample.Common"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
@@ -30,7 +28,7 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <TextBlock x:Name="InputTextBlock1" Width="300" TextWrapping="Wrap" Grid.Row="0" Style="{StaticResource BasicTextStyle}" HorizontalAlignment="Left" >
+            <TextBlock x:Name="InputTextBlock1" Width="300" TextWrapping="Wrap" Grid.Row="0" Style="{StaticResource BodyTextBlockStyle}" HorizontalAlignment="Left" >
                 This scenario demonstrates how to enumerate the audio devices attached to the system as well as retrieve additional properties.
             </TextBlock>
             <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Grid.Row="1">

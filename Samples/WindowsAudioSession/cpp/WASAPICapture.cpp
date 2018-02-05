@@ -112,6 +112,7 @@ HRESULT WASAPICapture::InitializeAudioDeviceAsync()
 
     // Get a string representing the Default Audio Capture Device
     m_DeviceIdString = MediaDevice::GetDefaultAudioCaptureId( Windows::Media::Devices::AudioDeviceRole::Default );
+	//loopback capture
 
     // This call must be made on the main UI thread.  Async operation will call back to 
     // IActivateAudioInterfaceCompletionHandler::ActivateCompleted, which must be an agile interface implementation
@@ -231,7 +232,7 @@ HRESULT WASAPICapture::ActivateCompleted( IActivateAudioInterfaceAsyncOperation 
     if (m_DeviceProps.IsLowLatency == false)
     {
         hr = m_AudioClient->Initialize(AUDCLNT_SHAREMODE_SHARED,
-            AUDCLNT_STREAMFLAGS_EVENTCALLBACK,
+			AUDCLNT_STREAMFLAGS_EVENTCALLBACK,
             200000,
             0,
             m_MixFormat,
@@ -240,7 +241,7 @@ HRESULT WASAPICapture::ActivateCompleted( IActivateAudioInterfaceAsyncOperation 
     else
     {
         hr = m_AudioClient->InitializeSharedAudioStream(
-            AUDCLNT_STREAMFLAGS_EVENTCALLBACK,
+			AUDCLNT_STREAMFLAGS_EVENTCALLBACK,
             m_MinPeriodInFrames,
             m_MixFormat,
             nullptr);

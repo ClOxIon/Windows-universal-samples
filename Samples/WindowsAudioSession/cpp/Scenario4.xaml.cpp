@@ -382,3 +382,9 @@ void Scenario4::StopCapture( Platform::Object^ sender, Object^ e )
     }
 }
 
+
+
+void SDKSample::WASAPIAudio::Scenario4::TextBlock_SelectionChanged(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+{
+
+}
